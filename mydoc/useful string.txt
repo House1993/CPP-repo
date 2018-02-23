@@ -1,0 +1,23 @@
+头文件 string
+
+1.可用 = 赋值
+2.可用 + 连接  （不要以为可以用 - 删除…）
+3.可用 < , > , == , != , >= , <= 直接比较
+  另外 .compare() 中间填入string也可以  如： a.compare( b ) 就是a与b比较
+  .compare()多参数用法 ——
+	a.compare( x1 , y1 , b , x2 , y2 ) 比较a从x1开始y1长的串与b从x2开始y2长的串
+	string a,b; a="abcd"; b="efgh"; a.compare( 1 , 2 , b , 2 , 2 );
+	就是比较 "bc" 和 "gh"
+4.清空要用 .clear()
+5.删除字符要用 .erase( x , y )  x和y为整数  表示删除从x开始的y个字符
+	例如：a="abcdefghijk"  a.erase(3,2)  就删掉了"de"
+6.测量串长要用 .size()
+7.判断是否是空串要用 .empty()
+8.读写要用  cin>> , cout<< , 或者 getline(cin , a )  [cin不能读空格 getline可以 a为string]
+9.可用[]提取字符  （提取后是字符不是字符串  如：if(a[3] == 'a') 正确 ）
+10.插入要用 .insert( x , b ) 将b插入x位置 （位置是从0开始的 ， b必须是string串不能是字符）
+	例如： a="abcde" b="1" a.insert( 1 , b ) 结果为 "a1bcde"
+11.查找要用 .find() [可以找串也可以找字符 ，找到返回位置 ，没找到返回-1 ]
+12.提取子串要用 .substr( x , y ) 提取从x开始的y个字符
+	例如：a="asdfghjkl"  b=a.substr(3,4) 则b为 "fghj"
+13.输出可用printf("%s",a.c_str());  a为string结构，a.c_str()为string的char*结构。

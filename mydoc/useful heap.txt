@@ -1,0 +1,14 @@
+头文件 cstdlib
+头文件 algorithm
+
+1.__is_heap 可以根据比较函数判断数组是否为堆。 例如：__is_heap(a,a+m,cmp) 参数：
+		first,last,cmp 数组头，数组尾，比较函数。如果是vector就用v.begin(),v.end()
+2.push_heap 在加入一个元素后，根据比较函数，将数组调整成堆。 例如：push_heap(a,a+m,cmp);
+		参数意义同上。  一般用法：a[m++]= val ; push_heap(a,a+m,cmp);
+		如果是vector就  v.push_back( val ) ;push_heap(v.begin(),v.end(),cmp);
+3.pop_heap 将堆顶调整到数组末尾，然后将除队尾外元素调整成堆。 例如：pop_heap(a,a+m,cmp);
+		参数意义同上。 一般用法：pop_heap(a,a+m,cmp); vis( a[m] ); m--;
+		如果是vector就 vis( v.front ); pop_heap(v.begin(),v.end(),cmp);v.pop_back();
+4.make_heap 可以将数组构造成堆。 例如：make_heap (v.begin(),v.end(),cmp);
+5.sort_heap 根据比较函数对排序。注意：此函数是在已经建好的堆上完成对排序操作，如果想要达到
+		真正排序目的必须要先make_heap在sort_heap 例如：sort_heap(a,a+n,cmp);

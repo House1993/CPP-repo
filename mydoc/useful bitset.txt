@@ -1,0 +1,11 @@
+头文件 bitset
+
+1.定义  bitset<300> bt;  即为0到299的位
+2.可用 [pos] 或者 bt.test(pos) 来访问位 ， 例如：bt[3]=1， if( bt[3] ) 如果第三位是1就是true，但是不能%d输出 ，同 bt.test(3)
+3.可用 bt.none() 判断是否都是0 ， 都是0返回true
+4.可用 bt.any() 判断是否有1， 有1返回true
+5.可用 bt.count() 返回1的个数
+6.可用 bt.size() 返回位大小， 即 bitset<300> bt; 返回300
+7.可用 bt.flip() 来翻转所有位， bt.flip(pos) 翻转特定位
+8.可用 bt.set() 赋值1给所有位， bt.set(pos) 赋值1给特定位
+9.可用 bt.reset() 赋值0给所有位， bt.reset(pos) 赋值0给特定位
